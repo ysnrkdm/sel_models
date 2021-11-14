@@ -1,3 +1,3 @@
-from multi_head_self_attention import MultiHeadSelfAttention
-from token_and_position_embedding import TokenAndPositionEmbedding
-from transformer_block import TransformerBlock
+from components.multi_head_self_attention import MultiHeadSelfAttention
+from components.token_and_position_embedding import TokenAndPositionEmbedding
+from components.transformer_block import TransformerBlock
