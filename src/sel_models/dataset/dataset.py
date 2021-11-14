@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 import os
 import json
 
@@ -15,6 +15,6 @@ class Dataset:
     def get_metadata_path(self) -> str:
         return os.path.join(self.base_path, 'metadata.json')
 
-    def get_metadata(self) -> dict[str, Any]:
+    def get_metadata(self) -> Dict[str, Any]:
         with open(self.get_metadata_path(), 'r', encoding='utf-8') as f:
             return json.load(f)
