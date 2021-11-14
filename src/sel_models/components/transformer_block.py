@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-from components.multi_head_self_attention import MultiHeadSelfAttention
+from .multi_head_self_attention import MultiHeadSelfAttention
 
 
 class TransformerBlock(layers.Layer):
