@@ -1,16 +1,20 @@
 from typing import Any, Dict
+from abc import ABC
 import os
 import json
 
 
-class Dataset:
+class Dataset(ABC):
     base_path: str
 
     def __init__(self, base_path: str):
         self.base_path = base_path
 
+    def get_dataset_name(self) -> str:
+        raise NotImplementedError()
+
     def get_dataset_path(self) -> str:
-        return os.path.join(self.base_path, 'dataset.txt')
+        return os.path.join(self.base_path, 'dataset.txt.gz')
 
     def get_metadata_path(self) -> str:
         return os.path.join(self.base_path, 'metadata.json')

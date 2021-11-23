@@ -7,6 +7,9 @@ class TokensDataset(Dataset):
     def __init__(self, base_path: str):
         super().__init__(base_path)
 
+    def get_dataset_name(self) -> str:
+        return 'TokensDataset'
+
     def get_vocab_path(self) -> str:
         return os.path.join(self.base_path, 'vocab.txt')
 
